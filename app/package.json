@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "adb": "adb reverse tcp:8545 tcp:8545"
+    "adb": "adb reverse tcp:8545 tcp:8545",
+    "postinstall": "node postinstall.js"
   },
   "dependencies": {
     "Base64": "^1.0.1",
