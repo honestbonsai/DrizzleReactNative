@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "drizzle": "^1.2.4",
+    "node-libs-react-native": "^1.0.3",
     "react": "16.6.1",
     "react-native": "0.57.7"
   },
