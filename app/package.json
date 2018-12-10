@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "adb": "adb reverse tcp:8545 tcp:8545"
   },
   "dependencies": {
     "react": "16.6.1",
