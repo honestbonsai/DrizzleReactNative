@@ -1,5 +1,5 @@
 /** @format */
-import "node-libs-react-native/globals";
+import "./shims";
 import { AppRegistry } from "react-native";
 import Core from "./Core";
 import { name as appName } from "./app.json";

@@ -8,6 +8,7 @@
     "adb": "adb reverse tcp:8545 tcp:8545"
   },
   "dependencies": {
+    "Base64": "^1.0.1",
     "drizzle": "^1.2.4",
     "node-libs-react-native": "^1.0.3",
     "react": "16.6.1",
