@@ -2619,10 +2619,9 @@ drbg.js@^1.0.1:
     create-hash "^1.1.2"
     create-hmac "^1.1.4"
 
-drizzle@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/drizzle/-/drizzle-1.2.4.tgz#903e8d85fa5b718efcfdc9ac3f145fd9c3876a09"
-  integrity sha512-5EHOx8QTpL+bAf4PfDwdTJ3eZp6HGrFxIIF/K9DrI+v3LrmDXPuVlefaI0HyZlOpfb1No5Y1e5/v2nannQeKhg==
+drizzle@trufflesuite/drizzle#feature/react-native:
+  version "1.2.5"
+  resolved "https://codeload.github.com/trufflesuite/drizzle/tar.gz/4e63c6f1973c0e23df9a3b2ab535c58756f0ecd6"
   dependencies:
     deepmerge "^2.1.1"
     eth-block-tracker-es5 "^2.3.2"

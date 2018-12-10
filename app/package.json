@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "Base64": "^1.0.1",
-    "drizzle": "^1.2.4",
+    "drizzle": "trufflesuite/drizzle#feature/react-native",
     "node-libs-react-native": "^1.0.3",
     "react": "16.6.1",
     "react-native": "0.57.7",
