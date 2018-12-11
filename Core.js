@@ -1,6 +1,6 @@
 import React from "react";
 import { Drizzle, generateStore } from "drizzle";
-import MyStringStore from "./contracts/MyStringStore.json";
+import MyStringStore from "./build/contracts/MyStringStore.json";
 import App from "./App";
 
 const options = { contracts: [MyStringStore] };
