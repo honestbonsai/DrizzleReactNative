@@ -1,4 +1,5 @@
 import "node-libs-react-native/globals";
+import './objectAssign-polyfill'
 import { btoa } from "Base64";
 import nodeUrl from 'url';
 
