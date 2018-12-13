@@ -11,10 +11,28 @@ import { Platform, StyleSheet, Text, View } from 'react-native';
 
 type Props = {};
 export default class Screen extends Component<Props> {
+  state = { loading: true, drizzleState: null }
+
+  componentDidMount() {
+    const { drizzle } = this.props;
+
+    this.unsubscribe = drizzle.store.subscribe(() => {
+      const drizzleState = drizzle.store.getState();
+
+      if (drizzleState.drizzleStatus.initialized) {
+        this.setState({ loading: false, drizzleState });
+      }
+    });
+  }
+
+  compomentWillUnmount() {
+    this.unsubscribe();
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>Hello</Text>
+        {this.state.loading ? <Text>Loading...</Text> : <Text>Hello</Text>}
       </View>
     );
   }
