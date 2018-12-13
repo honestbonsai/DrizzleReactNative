@@ -1,8 +1,8 @@
-import React from 'react';
-import { Text, View, Button, TextInput } from 'react-native';
+import React from "react";
+import { Text, View, Button, TextInput } from "react-native";
 
 class SetString extends React.Component {
-  state = { stackId: null, text: '' };
+  state = { stackId: null, text: "" };
 
   submit = () => {
     this.setValue(this.state.text);
@@ -13,7 +13,7 @@ class SetString extends React.Component {
     const contract = drizzle.contracts.MyStringStore;
 
     // let drizzle know we want to call the `set` method with `value`
-    const stackId = contract.methods['set'].cacheSend(value, {
+    const stackId = contract.methods["set"].cacheSend(value, {
       from: drizzleState.accounts[0]
     });
 
@@ -39,7 +39,7 @@ class SetString extends React.Component {
     return (
       <View>
         <TextInput
-          style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+          style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
           onChangeText={text => this.setState({ text })}
           value={this.state.text}
           placeholder="Enter some text"

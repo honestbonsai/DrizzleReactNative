@@ -6,10 +6,10 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import ReadString from './ReadString';
-import SetString from './SetString';
+import React, { Component } from "react";
+import { StyleSheet, Text, View } from "react-native";
+import ReadString from "./ReadString";
+import SetString from "./SetString";
 
 type Props = {};
 export default class Screen extends Component<Props> {
@@ -56,8 +56,8 @@ export default class Screen extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5FCFF"
   }
 });

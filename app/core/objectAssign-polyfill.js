@@ -6,12 +6,12 @@
  * RN 0.57.7 (and below I assume) uses the non-spec compliant Object.assign that breaks in dev RN builds
  * https://github.com/facebook/react-native/issues/16814
  */
-Object.defineProperty(Object, 'assign', {
+Object.defineProperty(Object, "assign", {
   // eslint-disable-next-line no-unused-vars
   value: function assign(target, varArgs) {
-    'use strict';
+    "use strict";
     if (target == null) {
-      throw new TypeError('Cannot convert undefined or null to object');
+      throw new TypeError("Cannot convert undefined or null to object");
     }
 
     let to = Object(target);
