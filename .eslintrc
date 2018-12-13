@@ -3,7 +3,8 @@
     "extends": [
         "prettier",
         "prettier/react",
-        "eslint:recommended"
+        "eslint:recommended",
+        "plugin:react/recommended"
     ],
     "env": {
         "react-native/react-native": true
