@@ -9,6 +9,7 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import ReadString from './ReadString'
+import SetString from './SetString'
 
 type Props = {};
 export default class Screen extends Component<Props> {
@@ -33,10 +34,16 @@ export default class Screen extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        {this.state.loading ? <Text>Loading...</Text> : <ReadString
-          drizzle={this.props.drizzle}
-          drizzleState={this.state.drizzleState}
-        />}
+        {this.state.loading ? <Text>Loading...</Text> : <View>
+          <ReadString
+            drizzle={this.props.drizzle}
+            drizzleState={this.state.drizzleState}
+          />
+          <SetString
+            drizzle={this.props.drizzle}
+            drizzleState={this.state.drizzleState}
+          />
+        </View>}
       </View>
     );
   }
