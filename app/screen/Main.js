@@ -7,13 +7,13 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
-import ReadString from './ReadString'
-import SetString from './SetString'
+import { StyleSheet, Text, View } from 'react-native';
+import ReadString from './ReadString';
+import SetString from './SetString';
 
 type Props = {};
 export default class Screen extends Component<Props> {
-  state = { loading: true, drizzleState: null }
+  state = { loading: true, drizzleState: null };
 
   componentDidMount() {
     const { drizzle } = this.props;
@@ -34,16 +34,20 @@ export default class Screen extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        {this.state.loading ? <Text>Loading...</Text> : <View>
-          <ReadString
-            drizzle={this.props.drizzle}
-            drizzleState={this.state.drizzleState}
-          />
-          <SetString
-            drizzle={this.props.drizzle}
-            drizzleState={this.state.drizzleState}
-          />
-        </View>}
+        {this.state.loading ? (
+          <Text>Loading...</Text>
+        ) : (
+          <View>
+            <ReadString
+              drizzle={this.props.drizzle}
+              drizzleState={this.state.drizzleState}
+            />
+            <SetString
+              drizzle={this.props.drizzle}
+              drizzleState={this.state.drizzleState}
+            />
+          </View>
+        )}
       </View>
     );
   }
@@ -54,6 +58,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F5FCFF'
   }
 });
