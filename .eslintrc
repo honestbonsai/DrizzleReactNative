@@ -1,50 +1,42 @@
 {
-    "parser": "babel-eslint",
-    "extends": [
-        "prettier",
-        "prettier/react",
-        "eslint:recommended",
-        "plugin:react/recommended"
+  "parser": "babel-eslint",
+  "extends": [
+    "prettier",
+    "prettier/react",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "react-native/react-native": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": 0,
+    "arrow-body-style": 0,
+    "no-underscore-dangle": 0,
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
     ],
-    "env": {
-        "react-native/react-native": true
-    },
-    "rules": {
-        "react/jsx-filename-extension": 0,
-        "arrow-body-style": 0,
-        "no-underscore-dangle": 0,
-        "no-plusplus": [
-            "error",
-            {
-                "allowForLoopAfterthoughts": true
-            }
-        ],
-        "import/prefer-default-export": 0,
-        "prettier/prettier": [
-            "error",
-            {
-                "singleQuote": true
-            }
-        ],
-        "react-native/no-unused-styles": 2,
-        "react-native/split-platform-components": 2,
-        "react-native/no-inline-styles": 2,
-        "react-native/no-color-literals": 2
-    },
-    "plugins": [
-        "prettier",
-        "react",
-        "react-native"
+    "import/prefer-default-export": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": false
+      }
     ],
-    "settings": {
-        "import/resolver": {
-            "node": {
-                "extensions": [
-                    ".js",
-                    ".ios.js",
-                    ".android.js"
-                ]
-            }
-        }
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2,
+    "react-native/no-inline-styles": 2,
+    "react-native/no-color-literals": 2
+  },
+  "plugins": ["prettier", "react", "react-native"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ios.js", ".android.js"]
+      }
     }
+  }
 }
