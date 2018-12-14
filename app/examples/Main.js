@@ -11,6 +11,7 @@ import { StyleSheet, Text, View } from "react-native";
 import ReadString from "./ReadString";
 import SetString from "./SetString";
 import TutorialToken from "./TutorialToken";
+import ComplexStorage from "./ComplexStorage";
 
 type Props = {};
 export default class Screen extends Component<Props> {
@@ -48,6 +49,10 @@ export default class Screen extends Component<Props> {
               drizzleState={this.state.drizzleState}
             />
             <TutorialToken
+              drizzle={this.props.drizzle}
+              drizzleState={this.state.drizzleState}
+            />
+            <ComplexStorage
               drizzle={this.props.drizzle}
               drizzleState={this.state.drizzleState}
             />
