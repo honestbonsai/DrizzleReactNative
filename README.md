@@ -9,6 +9,7 @@ This repo is a proof of concept for getting Drizzle to work on React Native.
 1. Start your emulator/plug in your device
 1. Install `ganache-cli` globally: `npm install -g ganache-cli`
 1. Start `ganache-cli`: `ganache-cli -b 3`
+1. Install `truffle` globally: `npm install -g truffle`
 1. Compile and migrate contracts: `yarn run setup`
 
 ## Installation
