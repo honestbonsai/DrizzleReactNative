@@ -10,21 +10,30 @@ class TutorialToken extends React.Component {
   };
 
   componentDidMount() {
-    const { drizzle, drizzleState } = this.props;
-    const contract = drizzle.contracts.TutorialToken;
-
-    // let drizzle know we want to watch the `myString` method
-    const dataKeyTotalSupply = contract.methods["totalSupply"].cacheCall();
-    const dataKeyAcc0 = contract.methods["balanceOf"].cacheCall(
-      drizzleState.accounts[0]
-    );
-    const dataKeyAcc1 = contract.methods["balanceOf"].cacheCall(
-      drizzleState.accounts[1]
-    );
-
-    // save the `dataKey` to local component state for later reference
-    this.setState({ dataKeyTotalSupply, dataKeyAcc0, dataKeyAcc1 });
+    this.setDataKeys();
   }
+
+  componentDidUpdate() {
+    this.setDataKeys();
+  }
+
+  setDataKeys = () => {
+    const { drizzle, drizzleState } = this.props;
+    if (Object.keys(drizzleState.accounts).length > 0) {
+      const contract = drizzle.contracts.TutorialToken;
+
+      // let drizzle know we want to watch the `myString` method
+      const dataKeyTotalSupply = contract.methods["totalSupply"].cacheCall();
+      const dataKeyAcc0 = contract.methods["balanceOf"].cacheCall(
+        drizzleState.accounts[0]
+      );
+      const dataKeyAcc1 = contract.methods["balanceOf"].cacheCall(
+        drizzleState.accounts[1]
+      );
+      // save the `dataKey` to local component state for later reference
+      this.setState({ dataKeyTotalSupply, dataKeyAcc0, dataKeyAcc1 });
+    }
+  };
 
   submit = () => {
     const { drizzle, drizzleState } = this.props;
@@ -61,6 +70,13 @@ class TutorialToken extends React.Component {
     const balAcc0 = TutorialToken.balanceOf[this.state.dataKeyAcc0];
     const balAcc1 = TutorialToken.balanceOf[this.state.dataKeyAcc1];
 
+    if (Object.keys(drizzleState.accounts).length === 0)
+      return (
+        <View>
+          <Text>TutorialToken</Text>
+          <Text>No accounts</Text>
+        </View>
+      );
     return (
       <View>
         <Text>TutorialToken</Text>
