@@ -7,11 +7,12 @@
  */
 
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, ScrollView, View } from "react-native";
 import ReadString from "./ReadString";
 import SetString from "./SetString";
 import TutorialToken from "./TutorialToken";
 import ComplexStorage from "./ComplexStorage";
+import DynamicContract from "./DynamicContract";
 
 type Props = {};
 export default class Screen extends Component<Props> {
@@ -39,7 +40,7 @@ export default class Screen extends Component<Props> {
         {this.state.loading ? (
           <Text>Loading...</Text>
         ) : (
-          <View>
+          <ScrollView>
             <ReadString
               drizzle={this.props.drizzle}
               drizzleState={this.state.drizzleState}
@@ -56,7 +57,11 @@ export default class Screen extends Component<Props> {
               drizzle={this.props.drizzle}
               drizzleState={this.state.drizzleState}
             />
-          </View>
+            <DynamicContract
+              drizzle={this.props.drizzle}
+              drizzleState={this.state.drizzleState}
+            />
+          </ScrollView>
         )}
       </View>
     );
