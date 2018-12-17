@@ -7,12 +7,13 @@
  */
 
 import React, { Component } from "react";
-import { StyleSheet, Text, ScrollView, View } from "react-native";
+import { StyleSheet, Text, ScrollView, View, Platform } from "react-native";
 import ReadString from "./ReadString";
 import SetString from "./SetString";
 import TutorialToken from "./TutorialToken";
 import ComplexStorage from "./ComplexStorage";
 import DynamicContract from "./DynamicContract";
+import { platform } from "os";
 
 type Props = {};
 export default class Screen extends Component<Props> {
@@ -73,6 +74,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#F5FCFF"
+    backgroundColor: "#F5FCFF",
+    ...Platform.select({
+      ios: { paddingTop: 50 }
+    })
   }
 });
