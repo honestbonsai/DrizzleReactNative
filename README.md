@@ -24,6 +24,6 @@ This repo is a proof of concept for getting Drizzle to work on React Native.
 
 ## Testing Dynamically Added Contract
 
-1. In a different Truffle project, deploy another version of TutorialToken to your Ganache testnet.
+1. In a **different** Truffle project, deploy another version of TutorialToken to your Ganache testnet: `truffle compile && truffle migrate`
 1. Copy the address that the contract was deployed to
 1. Paste the address into the variable `address`  in `app/examples/DynamicContract.js`
