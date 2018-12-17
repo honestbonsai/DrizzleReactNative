@@ -12,13 +12,6 @@
  *   },
  */
 
-require("dotenv").config();
-const HDWalletProvider = require("truffle-hdwallet-provider");
-
-const ropstenUrl = `https://ropsten.infura.io/v3/${
-  process.env.INFURA_ROPSTEN_PROJECT_ID
-}`;
-
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
   // to customize your Truffle configuration!
@@ -27,10 +20,6 @@ module.exports = {
       host: "localhost",
       port: 8545,
       network_id: "*"
-    },
-    ropsten: {
-      provider: () => new HDWalletProvider(process.env.MNEMONIC, ropstenUrl),
-      network_id: 3
     }
   }
 };
