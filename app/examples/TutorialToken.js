@@ -20,7 +20,7 @@ class TutorialToken extends React.Component {
   setDataKeys = () => {
     const { drizzle, drizzleState } = this.props;
     if (
-      Object.keys(drizzleState.accounts).length > 0 &&
+      Object.keys(drizzleState.accounts).length < 2 &&
       this.state.dataKeyTotalSupply === null
     ) {
       const contract = drizzle.contracts.TutorialToken;
@@ -73,11 +73,12 @@ class TutorialToken extends React.Component {
     const balAcc0 = TutorialToken.balanceOf[this.state.dataKeyAcc0];
     const balAcc1 = TutorialToken.balanceOf[this.state.dataKeyAcc1];
 
-    if (Object.keys(drizzleState.accounts).length === 0)
+    const numAccounts = Object.keys(drizzleState.accounts).length;
+    if (numAccounts < 2)
       return (
         <View>
           <Text>TutorialToken</Text>
-          <Text>No accounts</Text>
+          <Text>{numAccounts} accounts found. Need at least 2.</Text>
         </View>
       );
     return (
