@@ -12,10 +12,10 @@ const ropstenFalback = {
 };
 
 const options = {
-  contracts: [MyStringStore, TutorialToken, ComplexStorage],
-  web3: {
-    fallback: ropstenFalback
-  }
+  contracts: [MyStringStore, TutorialToken, ComplexStorage]
+  // web3: {
+  //   fallback: ropstenFalback
+  // }
 };
 const drizzleStore = generateStore(options);
 const drizzle = new Drizzle(options, drizzleStore);
