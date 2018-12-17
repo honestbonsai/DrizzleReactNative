@@ -13,7 +13,6 @@ import SetString from "./SetString";
 import TutorialToken from "./TutorialToken";
 import ComplexStorage from "./ComplexStorage";
 import DynamicContract from "./DynamicContract";
-import { platform } from "os";
 
 type Props = {};
 export default class Screen extends Component<Props> {
