@@ -19,7 +19,10 @@ class TutorialToken extends React.Component {
 
   setDataKeys = () => {
     const { drizzle, drizzleState } = this.props;
-    if (Object.keys(drizzleState.accounts).length > 0) {
+    if (
+      Object.keys(drizzleState.accounts).length > 0 &&
+      this.state.dataKeyTotalSupply === null
+    ) {
       const contract = drizzle.contracts.TutorialToken;
 
       // let drizzle know we want to watch the `myString` method
