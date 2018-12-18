@@ -24,6 +24,7 @@ This repo is a proof of concept for getting Drizzle to work on React Native.
 #### Simulator
 
 1. Start `ganache-cli`: `ganache-cli -b 3`
+1. Compile and migrate contracts: `truffle compile && truffle migrate`
 1. Do steps for [Testing Dynamically Added Contract](#testing-dynamically-added-contract)
 1. Install: Do it through Xcode
 
