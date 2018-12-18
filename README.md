@@ -25,6 +25,18 @@ This repo is a proof of concept for getting Drizzle to work on React Native.
 1. Start `ganache-cli`: `ganache-cli -b 3 -h LOCAL_MACHINE_IP`
 1. In `./truffle.js` for `development`, point Truffle to `LOCAL_MACHINE_IP` 
 1. Compile and migrate contracts: `truffle compile && truffle migrate`
+1. In `./app/core/Core.js`, point Drizzle to `LOCAL_MACHINE_IP`
+    ```
+    const options = {
+      ...
+      web3: {
+        fallback: {
+          type: "ws",
+          url: "ws://192.168.0.107:8545"
+        }
+      }
+    };
+    ```
 1. Do steps for [Testing Dynamically Added Contract](#testing-dynamically-added-contract)
 1. Install: Do it through Xcode
 
