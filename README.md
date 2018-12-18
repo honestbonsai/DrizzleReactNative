@@ -21,6 +21,14 @@ This repo is a proof of concept for getting Drizzle to work on React Native.
 
 ### iOS
 
+#### Simulator
+
+1. Start `ganache-cli`: `ganache-cli -b 3`
+1. Do steps for [Testing Dynamically Added Contract](#testing-dynamically-added-contract)
+1. Install: Do it through Xcode
+
+#### Physical device
+
 1. Find your `LOCAL_MACHINE_IP` by checking your network settings on your Mac where Ganache is running
 1. Start `ganache-cli`: `ganache-cli -b 3 -h LOCAL_MACHINE_IP`
 1. In `./truffle.js` for `development`, point Truffle to `LOCAL_MACHINE_IP` 
