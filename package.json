@@ -9,7 +9,6 @@
     "adb:metro": "adb reverse tcp:8081 tcp:8081",
     "adb:ganache": "adb reverse tcp:8545 tcp:8545",
     "adb": "yarn run adb:metro && yarn run adb:ganache",
-    "postinstall": "node postinstall.js",
     "setup": "truffle compile && truffle migrate && yarn run adb"
   },
   "dependencies": {
